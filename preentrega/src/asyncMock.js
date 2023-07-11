@@ -1,12 +1,16 @@
+
+
+
+
 const products = [
     {
         id: "1",
-        name: "iphone 12",
+        name: "Laptop idea pad 3 Lenovo",
         price: 1000,
-        category: "celular",
-        img:"https://cbafederal.net/wp-content/uploads/2021/02/i-12-a.png",
+        category: "Notebook",
+        img:"https://www.lenovo.com/medias/lenovo-laptop-ideapad-3-15-intel-gallery.png?context=bWFzdGVyfHJvb3R8Mzc5MTQ0fGltYWdlL3BuZ3xoMzcvaDBkLzE0MTkwNTMwNzU2NjM4LnBuZ3w5ZDRhOWU5YjBjZjUxYWI1MGMyMWU1NGNlODAyMzgyZTQyZDQyYzBiODkyYTk0YzYwZGViNmQ5ZjNkNjg2Y2Qz",
         stock: 25,
-        description: "Descripcion de Iphone 12"
+        description: "Descripcion de Laptop idea pad 3"
     },
     { id: "2", name: "Samsung S21", price: 800, category: "Celular", "imagen":"https://www.samsung.com/ar/smartphones/galaxy-s21-5g/galaxy-s21-fe-5g/buy/", stock: 25, description:"Descripcion de Samsung Galaxy S21"},
 
