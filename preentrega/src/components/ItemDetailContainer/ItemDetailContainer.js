@@ -1,6 +1,6 @@
 import "./ItemDetailContainer.css"
 import { useState, useEffect } from "react"
-import { getProductById } from "../../AsyncMock" 
+import { getProductById } from "../../asyncMock" 
 import ItemDetail from "../ItemDetail/ItemDetail"
 import { useParams } from "react-router-dom"
 
