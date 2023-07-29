@@ -1,8 +1,11 @@
 import "./ItemDetailContainer.css"
 import { useState, useEffect } from "react"
-import { getProductById } from "../../asyncMock" 
+import { getDoc, doc } from "firebase/firestore"
 import ItemDetail from "../ItemDetail/ItemDetail"
 import { useParams } from "react-router-dom"
+import { db } from "../../services/firebase/firebaseConfig"
+
+
 
 const ItemDetailContainer = () => {
     const [product, setProduct] = useState(null)
