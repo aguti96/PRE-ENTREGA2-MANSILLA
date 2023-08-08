@@ -11,7 +11,7 @@ const ItemDetailContainer = () => {
 
     useEffect(() => {
         const getProductById = async (itemId) => {
-            const docRef = doc(db, "products", itemId);
+            const docRef = doc(db, "Items", itemId);
             const docSnap = await getDoc(docRef);
             if (docSnap.exists()) {
                 return { id: docSnap.id, ...docSnap.data() };
