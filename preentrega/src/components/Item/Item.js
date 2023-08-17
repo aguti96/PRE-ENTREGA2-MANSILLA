@@ -1,34 +1,37 @@
 import { Link } from "react-router-dom"
 
 
-const Item = ({id, name, imagen, price, stock}) => {
+const Item = ({id, nombre, foto, precio, stock})=>{
+    return (
 
-    return(
-        <article className="CardItem">
-            <header className="header">
-                <h2 className="ItemHeader">
-                    {name}
-                </h2>
-            </header>
-            <picture>
-                <img src={imagen} alt={name} className="ItemImg"/>
-            </picture>
-            <section>
-                <p className="info">
-                    Precio: ${price}
+        <div className="contenedor">
+            <div class='column is-one-quarter'>
+                <div class="card equal-height">
+                    <div class="card-image has-text-centered">
+                        <figure class="image is-64x64 is-inline-block">
+                            <img src={foto} alt={nombre} />
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <div class="media">
+                            <div class="media-left">
+                            </div>
+                            <div class="media-content">
+                                <p class="title is-4">{nombre}</p>
+                                <p class="subtitle is-6">Precio: ${precio}</p>
+                                <p class="subtitle is-6">Stock Disponible: {stock}</p>
+                            </div>
+                        </div>
 
-                </p>
-                <p className="info">
-                    Stock disponible: {stock}
-                </p>
-            
-
-            </section>
-            <footer className="ItemFooter">
-                <Link to={`/item/${id}`} className="Option"> Ver detalle </Link>
-            </footer>
-        </article>
+                        <div class="content">
+                            <Link to={`/item/${id}`} className="option" class="button is-primary">Ver detalle</Link>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     )
 }
+
 
 export default Item

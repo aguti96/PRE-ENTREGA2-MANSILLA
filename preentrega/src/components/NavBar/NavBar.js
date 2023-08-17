@@ -1,41 +1,21 @@
-import React from 'react';
-import CartWidget from "../CartWidget/CartWidget";
-import { Link, NavLink } from "react-router-dom";
+import CartWidget from '../CartWidget/CartWidget'
+import { NavLink, Link } from 'react-router-dom'
 
-const Navbar = () => {
-  return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <div className="container-fluid">
-        <Link className="navbar-brand" to="/">
-          Inicio
-        </Link>
-        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav mr-auto">
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/category/Celulares">
-                Celulares
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/category/Tablets">
-                Tablets
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/category/Notebooks">
-                Notebooks
-              </NavLink>
-            </li>
-          </ul>
-          <CartWidget />
-        </div>
-      </div>
-    </nav>
-  );
-};
+const NavBar = () => { 
+    return (
+        <nav>
+            <Link to='/' class="button is-primary">
+                <h3>Ecomm</h3>
+            </Link>
+            <div>
+                <NavLink to={'/categoria/amigurumi'}class="button is-primary" className={({isActive})=>isActive ? 'ActiveOption':'Option'}>Amigurumis</NavLink>
+                <NavLink to={'/categoria/accesorios'} class="button is-primary" className={({isActive})=>isActive ? 'ActiveOption':'Option'}>Accesorios</NavLink>
+                <NavLink to={'/categoria/decoracion'} class="button is-primary" className={({isActive})=>isActive ? 'ActiveOption':'Option'}>Decoracion</NavLink>
+                <NavLink to={'/categoria/bebe'} class="button is-primary" className={({isActive})=>isActive ? 'ActiveOption':'Option'}>Articulos de Bebe</NavLink>
+            </div>
+            <CartWidget/>
+        </nav>
+    )
+}
 
-export default Navbar;
-
+export default NavBar
