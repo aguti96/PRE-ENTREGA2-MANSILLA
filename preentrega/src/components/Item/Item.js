@@ -1,37 +1,25 @@
-import { Link } from "react-router-dom"
+import React from "react";
+import { Link } from "react-router-dom";
+import "./Item.css";
 
-
-const Item = ({id, nombre, foto, precio, stock})=>{
+const Item = ({ id, nombre, imagen, precio, stock }) => {
     return (
-
-        <div className="contenedor">
-            <div class='column is-one-quarter'>
-                <div class="card equal-height">
-                    <div class="card-image has-text-centered">
-                        <figure class="image is-64x64 is-inline-block">
-                            <img src={foto} alt={nombre} />
-                        </figure>
-                    </div>
-                    <div class="card-content">
-                        <div class="media">
-                            <div class="media-left">
-                            </div>
-                            <div class="media-content">
-                                <p class="title is-4">{nombre}</p>
-                                <p class="subtitle is-6">Precio: ${precio}</p>
-                                <p class="subtitle is-6">Stock Disponible: {stock}</p>
-                            </div>
-                        </div>
-
-                        <div class="content">
-                            <Link to={`/item/${id}`} className="option" class="button is-primary">Ver detalle</Link>
-                        </div>
-                    </div>
+        <div className="item-card">
+            <div className="card-image">
+                <figure className="image is-4by3">
+                    <img src={imagen} alt={nombre} />
+                </figure>
+            </div>
+            <div className="card-content">
+                <div className="content">
+                    <h3 className="item-title">{nombre}</h3>
+                    <p className="item-price">Precio: ${precio}</p>
+                    <p className="item-stock">Stock Disponible: {stock}</p>
+                    <Link to={`/item/${id}`} className="item-link button is-primary">Ver detalle</Link>
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
-
-export default Item
+export default Item;

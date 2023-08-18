@@ -1,0 +1,21 @@
+.checkout-container {
+    padding: 20px;
+}
+
+.loading-container,
+.order-success-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.order-success-container {
+    flex-direction: column;
+}
+
+.order-success-container p {
+    margin-top: 10px;
+}

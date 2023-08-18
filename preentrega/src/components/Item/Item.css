@@ -1,0 +1,42 @@
+.item-card {
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.card-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+}
+
+.card-content {
+    padding: 10px;
+}
+
+.item-title {
+    font-size: 1.2rem;
+    margin: 5px 0;
+}
+
+.item-price {
+    font-size: 1rem;
+    color: #666;
+    margin: 5px 0;
+}
+
+.item-stock {
+    font-size: 1rem;
+    color: #666;
+    margin: 5px 0;
+}
+
+.item-link {
+    margin-top: 10px;
+}

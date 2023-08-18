@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { db } from "../../services/firebase/firebase";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
-
+import "./ItemDetailContainer.css";
 
 const ItemDetailContainer = () => {
     const [product, setProduct] = useState(null);
@@ -30,10 +30,15 @@ const ItemDetailContainer = () => {
     }, [itemId]);
 
     return (
-        <div className="ItemDetailContainer">
-            <ItemDetail {...product} />
+        <div className="item-detail-container">
+            {product ? (
+                <ItemDetail {...product} />
+            ) : (
+                <p>Loading...</p>
+            )}
         </div>
     );
 };
 
 export default ItemDetailContainer;
+
